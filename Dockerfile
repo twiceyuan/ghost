@@ -1,6 +1,8 @@
 # http://support.ghost.org/supported-node-versions/
 # https://github.com/nodejs/LTS
-FROM node:4-slim
+# FROM node:4-slim
+# via https://github.com/alexellis/ghost-on-docker/blob/master/ARMv7/Dockerfile
+FROM alexellis2/node4.x-arm:latest
 
 RUN groupadd user && useradd --create-home --home-dir /home/user -g user user
 
